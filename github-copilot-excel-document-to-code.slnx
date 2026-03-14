@@ -3,6 +3,11 @@
     <Project Path="src/Web/Web.csproj" />
   </Folder>
   <Folder Name="/src/Modules/" />
+  <Folder Name="/src/Modules/Attendee/">
+    <Project Path="src/Modules/Attendee/Attendee.Application/Attendee.Application.csproj" />
+    <Project Path="src/Modules/Attendee/Attendee.Domain/Attendee.Domain.csproj" />
+    <Project Path="src/Modules/Attendee/Attendee.Infrastructure/Attendee.Infrastructure.csproj" />
+  </Folder>
   <Folder Name="/src/Modules/Counter/">
     <Project Path="src/Modules/Counter/Counter.Application/Counter.Application.csproj" />
     <Project Path="src/Modules/Counter/Counter.Domain/Counter.Domain.csproj" />

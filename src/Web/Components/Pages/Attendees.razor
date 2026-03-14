@@ -1,0 +1,21 @@
+@page "/attendees"
+@using Attendee.Application
+@using Microsoft.AspNetCore.Components.QuickGrid
+@rendermode InteractiveServer
+
+<PageTitle>イベント参加者一覧</PageTitle>
+
+<h1>イベント参加者一覧</h1>
+
+<div class="mb-3">
+    <input type="text" class="form-control" placeholder="アカウント名で検索..."
+           @bind="searchText" @bind:event="oninput" @bind:after="OnSearchTextChanged" />
+</div>
+
+<QuickGrid Items="filteredAttendees">
+    <PropertyColumn Property="@(a => a.AccountName)" Title="アカウント名" />
+    <TemplateColumn Title="参加・不参加">
+        <input type="checkbox" checked="@context.IsAttended"
+               @onchange="@(e => OnAttendanceChanged(context.ID, (bool)(e.Value ?? false)))" />
+    </TemplateColumn>
+</QuickGrid>

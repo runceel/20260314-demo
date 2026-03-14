@@ -1,2 +1,11 @@
 <Solution>
+  <Folder Name="/src/">
+    <Project Path="src/Web/Web.csproj" />
+  </Folder>
+  <Folder Name="/src/Modules/" />
+  <Folder Name="/src/Modules/Counter/">
+    <Project Path="src/Modules/Counter/Counter.Application/Counter.Application.csproj" />
+    <Project Path="src/Modules/Counter/Counter.Domain/Counter.Domain.csproj" />
+    <Project Path="src/Modules/Counter/Counter.Infrastructure/Counter.Infrastructure.csproj" />
+  </Folder>
 </Solution>
